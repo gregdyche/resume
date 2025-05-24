@@ -3,8 +3,8 @@
 **MBA**  
 847 S. 35th Avenue  
 Omaha, NE 68105  
-📞 (402) 881-6372  
-📧 jgd53467@creighton.edu
+Phone: (402) 881-6372  
+Email: jgd53467@creighton.edu
 
 ---
 

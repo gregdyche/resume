@@ -1,8 +1,24 @@
 import subprocess
 from pathlib import Path
+import questionary
 
 def export_resume():
-    md_file = Path("resume.md")
+    resume_files = list(Path('.').glob("*.md"))
+    if not resume_files:
+        print("❌ No markdown resumes found.")
+        return
+
+    choices = [f.name for f in resume_files]
+    selected_file = questionary.select(
+        "Which resume would you like to export?",
+        choices=choices
+    ).ask()
+
+    if not selected_file:
+        print("❌ No selection made.")
+        return
+
+    md_file = Path(selected_file)
     pdf_file = Path("resume.pdf")
 
     if not md_file.exists():
